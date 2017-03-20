@@ -1,0 +1,2 @@
+# BowlingKata
+MVA TDD "kurs"
