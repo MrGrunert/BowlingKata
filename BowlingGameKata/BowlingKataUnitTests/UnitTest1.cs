@@ -66,6 +66,21 @@ namespace BowlingKataUnitTests
             Assert.AreEqual(16, g.scoreGame());
         }
 
+        [TestMethod]
+        public void OneStrikeReturnAppropriateValue()
+        {
+            //arrange
+            g.roll(10); // dtrike!
+            g.roll(3); 
+            g.roll(4);
+
+            //act
+            rollMany(16, 0);
+
+            //assert
+            Assert.AreEqual(24, g.scoreGame());
+        }
+
 
         public void rollMany(int rolls, int pins)
         {
