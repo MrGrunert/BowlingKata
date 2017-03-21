@@ -27,9 +27,9 @@ namespace BowlingGameKata
 
             for (int frame = 0; frame < 10; frame++)
             {
-                if (rolls[frameIndex] == 10)
+                if (IsStrike(frameIndex))
                 {
-                    score += rolls[frameIndex] + rolls[frameIndex + 1] + rolls[frameIndex + 2];
+                    score += 10 + StrikeBonus(frameIndex);
                     frameIndex++;
                 }
                 else if (IsSpare(frameIndex)) //spare
@@ -52,5 +52,14 @@ namespace BowlingGameKata
             return rolls[frameIndex] + rolls[frameIndex + 1] == 10;
         }
 
+        public bool IsStrike(int frameIndex)
+        {
+           return rolls[frameIndex] == 10;
+        }
+
+        public int StrikeBonus(int frameIndex)
+        {
+            return rolls[frameIndex + 1] + rolls[frameIndex + 2];
+        }
     }
 }

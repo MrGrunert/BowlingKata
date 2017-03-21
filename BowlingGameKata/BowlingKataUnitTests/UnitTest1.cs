@@ -82,6 +82,20 @@ namespace BowlingKataUnitTests
         }
 
 
+        [TestMethod]
+        public void PerfectGameReturn300()
+        {
+            //arrange
+           
+
+            //act
+            rollMany(12, 10);
+
+            //assert
+            Assert.AreEqual(300, g.scoreGame());
+        }
+
+
         public void rollMany(int rolls, int pins)
         {
             for (int i = 0; i < rolls; i++)
