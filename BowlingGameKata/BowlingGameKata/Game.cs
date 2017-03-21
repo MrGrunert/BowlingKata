@@ -22,14 +22,29 @@ namespace BowlingGameKata
         public int scoreGame()
         {
             int score = 0;
-            for (int i = 0; i < rolls.Length; i++)
+            int frameIndex = 0;
+
+
+            for (int frame = 0; frame < 10; frame++)
             {
-                score += rolls[i];
+                if (IsSpare(frameIndex)) //spare
+                {
+                    score += 10 + rolls[frameIndex + 2];
+                }
+                else
+                {
+                    score += rolls[frameIndex] + rolls[frameIndex + 1];
+                }
+                
+                frameIndex += 2;
             }
             return score;
         }
 
-      
+        public bool IsSpare(int frameIndex)
+        {
+            return rolls[frameIndex] + rolls[frameIndex + 1] == 10;
+        }
 
     }
 }
