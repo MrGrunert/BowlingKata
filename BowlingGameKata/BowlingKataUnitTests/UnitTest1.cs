@@ -20,10 +20,8 @@ namespace BowlingKataUnitTests
         {
             //arrange
             
-
             //act
            
-
             //assert
             Assert.IsNotNull(g);
         }
@@ -37,8 +35,6 @@ namespace BowlingKataUnitTests
 
             //act
            
-
-
             //assert
             Assert.AreEqual(0, g.scoreGame());
         }
@@ -51,8 +47,6 @@ namespace BowlingKataUnitTests
             //act
             rollMany(20, 1);
            
-
-
             //assert
             Assert.AreEqual(20, g.scoreGame());
         }

@@ -21,8 +21,7 @@ namespace BowlingGameKata
             return score;
         }
 
-       //add this to test gitpus
-       // test igen då..
+      
 
     }
 }
