@@ -31,9 +31,9 @@ namespace BowlingKataUnitTests
         {
             //arrange
 
-            int pins = 0;
-
             //act
+            rollMany(20, 0);
+
            
             //assert
             Assert.AreEqual(0, g.scoreGame());
@@ -50,6 +50,21 @@ namespace BowlingKataUnitTests
             //assert
             Assert.AreEqual(20, g.scoreGame());
         }
+
+        //[TestMethod]
+        //public void OneSPareReturnAppropriateValue()
+        //{
+        //    //arrange
+        //    g.roll(5);
+        //    g.roll(5); //spare
+        //    g.roll(3);
+
+        //    //act
+        //    rollMany(17, 0);
+
+        //    //assert
+        //    Assert.AreEqual(16, g.scoreGame());
+        //}
 
 
         public void rollMany(int rolls, int pins)
